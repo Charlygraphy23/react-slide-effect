@@ -1,0 +1,122 @@
+@use "../../style/common.scss" as S;
+
+$slidHeight: 800px;
+$slidWidth: 500px;
+
+.slide {
+    grid-area: 1 / 1 / 2 / 2;
+    max-width: $slidWidth;
+    // max-height: $slidHeight;
+    position: relative;
+    pointer-events: none;
+
+    &.active {
+        pointer-events: all;
+
+        .button__wrapper {
+            opacity: 1;
+            pointer-events: all;
+
+        }
+    }
+
+
+    .button__wrapper {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    img {
+        width: $slidWidth;
+        opacity: 0;
+        pointer-events: none;
+        object-fit: cover;
+    }
+
+    h1 {
+        position: absolute;
+        top: 10%;
+        font-size: 5rem;
+        left: -40px;
+        color: white;
+        pointer-events: none;
+        opacity: 0;
+
+        span {
+            display: inline-block;
+            opacity: 0;
+        }
+    }
+
+    .button__wrapper {
+        @include S.flexBox(row, flex-end, center);
+
+        button {
+            background: transparent;
+            border: none;
+            filter: invert(1);
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    }
+}
+
+@media screen and (width <= 800px) {
+    $slidWidth: 400px;
+
+    .slide {
+        img {
+            width: $slidWidth;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media screen and (width <= 600px) {
+    $slidWidth: 300px;
+
+    .slide {
+        img {
+            width: $slidWidth;
+        }
+        h1 {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media screen and (width <= 450px) {
+    .slide {
+    
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+
+@media screen and (width <= 400px) {
+
+    $slidWidth: 250px;
+
+
+    .slide {
+    
+        img {
+            width: $slidWidth;
+        }
+    }
+}
+
+@media screen and (width <= 350px) {
+    $slidWidth: 200px;
+
+    .slide {
+        img {
+            width: $slidWidth;
+        }
+    }
+}

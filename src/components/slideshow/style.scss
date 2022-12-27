@@ -1,0 +1,20 @@
+@use '../../style/common.scss' as S;
+
+.slideshow{
+    width: 100%;
+    height: 100vh;
+    
+   
+    
+    @include S.flexBox(column);
+
+    .slide_wrapper{
+        display : grid;
+        grid-template-columns: 100%;
+        place-items: center;
+        flex: 1;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+}
