@@ -18,3 +18,4 @@ Animated Photo previewer
 
 ## preview - 
 ![image](https://user-images.githubusercontent.com/46165735/209648281-681243d0-cd1e-4f1a-84a2-61ee8f15f1c8.png)
+![imgae](https://github.com/Charlygraphy23/react-slide-effect/blob/master/src/assets/charlygraphy.gif?raw=true)
