@@ -1,6 +1,8 @@
 # react-slide-effect
 Animated Photo previewer
 
+## Inspired From - 
+[codrops/ MotionTransitionEffect](https://github.com/codrops/MotionTransitionEffect/)
 
 ## RUN - 
 - npm i 
